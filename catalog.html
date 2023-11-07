@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comfortaa&family=Golos+Text:wght@400;500;600;700&family=Inter:wght@500;700&family=Montserrat:wght@400;600&family=Raleway:wght@400;600&family=Yeseva+One&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style/style.css" />
+    <link rel="stylesheet" href="style/styleCatalog.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="headerTop">
+        <div class="container">
+          <div class="content">
+            <div
+              class="content__logo"
+              onclick="window.location.href = 'index.html'"
+            >
+              <img src="./images/Logo.svg" alt="" />
+            </div>
+            <div class="menu__links--small">
+              <div class="pointe link__style">
+                <img src="./icons/pointer-blue.svg" alt="" />
+              </div>
+              <div class="lupe link__style">
+                <img src="./icons/lupe.svg" alt="" />
+              </div>
+              <a href="/" class="link__style link__style--on">
+                <span></span>
+                <span></span>
+                <span></span>
+              </a>
+            </div>
+            <div class="content__nav">
+              <nav class="nav">
+                <div class="point__city">
+                  <img
+                    class="point"
+                    src="./images/point-city.svg"
+                    alt="logoPoint"
+                  />
+                  <div class="nav__city font500">Екатеринбург</div>
+                </div>
+                <ul class="menu__items font500">
+                  <li class="item item__after">
+                    <div class="item__name">О компании</div>
+                    <div class="arrowPointer">
+                      <span class="arrowLeft"></span>
+                      <span class="arrowRight"></span>
+                    </div>
+                    <ul class="item__menu">
+                      <li><a href="#">Menu 1</a></li>
+                      <li><a href="#">Menu 2</a></li>
+                      <li><a href="#">Menu 3</a></li>
+                    </ul>
+                  </li>
+                  <li class="item item__after">
+                    <div class="item__name">Покупателям</div>
+                    <div class="arrowPointer">
+                      <span class="arrowLeft"></span>
+                      <span class="arrowRight"></span>
+                    </div>
+                    <ul class="item__menu">
+                      <li><a href="#">Menu 1</a></li>
+                      <li><a href="#">Menu 2</a></li>
+                      <li><a href="#">Menu 3</a></li>
+                    </ul>
+                  </li>
+                  <li class="item">Поставщикам</li>
+                  <li class="item">Контакты</li>
+                </ul>
+              </nav>
+              <hr />
+              <div class="search__info">
+                <a href="/" class="btn__search">
+                  <div class="management">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </div>
+                  <p class="font600">Каталог товаров</p>
+                </a>
+                <input
+                  class="input__search font400"
+                  type="text"
+                  placeholder="Поиск товаров..."
+                />
+                <div class="favourites font500">
+                  <img src="./icons/heart.svg" alt="" />
+                  <span>Избранное</span>
+                  <div class="count count__favorites" data-count="8">8</div>
+                </div>
+                <div class="prodact font500">
+                  <img src="./icons/basket.svg" alt="" />
+                  <span>Корзина</span>
+                  <div class="count count__basket" data-basket="120">120</div>
+                </div>
+                <button class="btn__accaunt font500">Войти</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <div class="container">
+        <div class="catalog">
+          <div class="list__catalog">
+            <ul class="list__prodacts">
+              <li class="current"><a href="#">Актуальные</a></li>
+              <li class="stock"><a href="#">Акции</a></li>
+              <li><a href="#">Новогодние товары</a></li>
+              <li><a href="#">Галантерея и аксессуары</a></li>
+              <li><a href="#">Хозтовары</a></li>
+              <li><a href="#">Праздники и подарки</a></li>
+              <li><a href="#">Праздники и подарки</a></li>
+              <li><a href="#">Домашний текстиль</a></li>
+              <li><a href="#">Творчество</a></li>
+              <li><a href="#">Туризм и активный отдых</a></li>
+              <li><a href="#">Товары для рассады</a></li>
+              <li><a href="#">Игрушки, товары для детей</a></li>
+              <li><a href="#">Пикник</a></li>
+              <li><a href="#">Спортивные товары</a></li>
+              <li><a href="#">Товары для животных</a></li>
+              <li><a href="#">Интерьерное освещение</a></li>
+              <li><a href="#">Одежда, обувь, головные уборы</a></li>
+              <li><a href="#">Снегоуборочный инвентарь</a></li>
+              <li><a href="#">Бассейны и аксессуары</a></li>
+              <li><a href="#">Средства гигиены и бытовая химия</a></li>
+              <li><a href="#">Товары для бани и сауны</a></li>
+              <li><a href="#">Строительство и ремонт</a></li>
+              <li><a href="#">Автотовары</a></li>
+            </ul>
+          </div>
+          <div class="list__prodacts--box">
+            <div class="subdirectory"></div>
+            <div class="headerSliderProdact">
+              <div class="swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img src="./images/12341_1.png" alt="" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="./images/12341_1.png" alt="" />
+                  </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="catalog__mobile">
+          <div class="change__city"><p>Екатеринбург</p></div>
+          <div class="catalog__prodact"><p>Каталог товаров</p></div>
+        </div>
+    </div>
+    </main>
+    <footer class="footer">
+      <div class="items__footerMenu">
+        <div class="item__footer active">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+          >
+            <path
+              d="M12 17V13M2 7.99998L11.732 3.13398C11.8152 3.09243 11.907 3.0708 12 3.0708C12.093 3.0708 12.1848 3.09243 12.268 3.13398L22 7.99998M20 11V19C20 19.5304 19.7893 20.0391 19.4142 20.4142C19.0391 20.7893 18.5304 21 18 21H6C5.46957 21 4.96086 20.7893 4.58579 20.4142C4.21071 20.0391 4 19.5304 4 19V11"
+              stroke="#0064D8"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <p class="item__footer--title">Главная</p>
+        </div>
+        <div class="item__footer">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+          >
+            <path
+              d="M7.125 6C7.125 5.70163 7.24353 5.41548 7.45451 5.2045C7.66548 4.99353 7.95163 4.875 8.25 4.875H20.25C20.5484 4.875 20.8345 4.99353 21.0455 5.2045C21.2565 5.41548 21.375 5.70163 21.375 6C21.375 6.29837 21.2565 6.58452 21.0455 6.7955C20.8345 7.00647 20.5484 7.125 20.25 7.125H8.25C7.95163 7.125 7.66548 7.00647 7.45451 6.7955C7.24353 6.58452 7.125 6.29837 7.125 6ZM20.25 10.875H8.25C7.95163 10.875 7.66548 10.9935 7.45451 11.2045C7.24353 11.4155 7.125 11.7016 7.125 12C7.125 12.2984 7.24353 12.5845 7.45451 12.7955C7.66548 13.0065 7.95163 13.125 8.25 13.125H20.25C20.5484 13.125 20.8345 13.0065 21.0455 12.7955C21.2565 12.5845 21.375 12.2984 21.375 12C21.375 11.7016 21.2565 11.4155 21.0455 11.2045C20.8345 10.9935 20.5484 10.875 20.25 10.875ZM20.25 16.875H8.25C7.95163 16.875 7.66548 16.9935 7.45451 17.2045C7.24353 17.4155 7.125 17.7016 7.125 18C7.125 18.2984 7.24353 18.5845 7.45451 18.7955C7.66548 19.0065 7.95163 19.125 8.25 19.125H20.25C20.5484 19.125 20.8345 19.0065 21.0455 18.7955C21.2565 18.5845 21.375 18.2984 21.375 18C21.375 17.7016 21.2565 17.4155 21.0455 17.2045C20.8345 16.9935 20.5484 16.875 20.25 16.875ZM4.125 10.5C3.82833 10.5 3.53832 10.588 3.29165 10.7528C3.04497 10.9176 2.85271 11.1519 2.73918 11.426C2.62565 11.7001 2.59594 12.0017 2.65382 12.2926C2.7117 12.5836 2.85456 12.8509 3.06434 13.0607C3.27412 13.2704 3.54139 13.4133 3.83237 13.4712C4.12334 13.5291 4.42494 13.4994 4.69903 13.3858C4.97312 13.2723 5.20738 13.08 5.37221 12.8334C5.53703 12.5867 5.625 12.2967 5.625 12C5.625 11.6022 5.46697 11.2206 5.18566 10.9393C4.90436 10.658 4.52283 10.5 4.125 10.5ZM4.125 4.5C3.82833 4.5 3.53832 4.58797 3.29165 4.7528C3.04497 4.91762 2.85271 5.15189 2.73918 5.42597C2.62565 5.70006 2.59594 6.00166 2.65382 6.29264C2.7117 6.58361 2.85456 6.85088 3.06434 7.06066C3.27412 7.27044 3.54139 7.4133 3.83237 7.47118C4.12334 7.52906 4.42494 7.49935 4.69903 7.38582C4.97312 7.27229 5.20738 7.08003 5.37221 6.83336C5.53703 6.58668 5.625 6.29667 5.625 6C5.625 5.60218 5.46697 5.22064 5.18566 4.93934C4.90436 4.65804 4.52283 4.5 4.125 4.5ZM4.125 16.5C3.82833 16.5 3.53832 16.588 3.29165 16.7528C3.04497 16.9176 2.85271 17.1519 2.73918 17.426C2.62565 17.7001 2.59594 18.0017 2.65382 18.2926C2.7117 18.5836 2.85456 18.8509 3.06434 19.0607C3.27412 19.2704 3.54139 19.4133 3.83237 19.4712C4.12334 19.5291 4.42494 19.4994 4.69903 19.3858C4.97312 19.2723 5.20738 19.08 5.37221 18.8334C5.53703 18.5867 5.625 18.2967 5.625 18C5.625 17.6022 5.46697 17.2206 5.18566 16.9393C4.90436 16.658 4.52283 16.5 4.125 16.5Z"
+              fill="#8285A5"
+            />
+          </svg>
+          <p class="item__footer--title">Каталог</p>
+        </div>
+        <div class="item__footer">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+          >
+            <path
+              d="M19.5 19C19.8978 19 20.2794 19.158 20.5607 19.4393C20.842 19.7206 21 20.1022 21 20.5C21 20.8978 20.842 21.2794 20.5607 21.5607C20.2794 21.842 19.8978 22 19.5 22C19.1022 22 18.7206 21.842 18.4393 21.5607C18.158 21.2794 18 20.8978 18 20.5C18 20.1022 18.158 19.7206 18.4393 19.4393C18.7206 19.158 19.1022 19 19.5 19ZM19.5 19H5.23C3.446 19 2.5 18.219 2.5 17C2.5 15.781 3.446 15 5.23 15H20M5 4H22L20 15M5 4L7 15H20M5 4C4.833 3.333 4 2 2 2M9.5 22C9.89782 22 10.2794 21.842 10.5607 21.5607C10.842 21.2794 11 20.8978 11 20.5C11 20.1022 10.842 19.7206 10.5607 19.4393C10.2794 19.158 9.89782 19 9.5 19C9.10218 19 8.72064 19.158 8.43934 19.4393C8.15804 19.7206 8 20.1022 8 20.5C8 20.8978 8.15804 21.2794 8.43934 21.5607C8.72064 21.842 9.10218 22 9.5 22Z"
+              stroke="#8285A5"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <p class="item__footer--title">Корзина</p>
+        </div>
+        <div class="item__footer">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+          >
+            <path
+              d="M16.6875 2.625C14.8041 2.625 13.1325 3.36844 12 4.64625C10.8675 3.36844 9.19594 2.625 7.3125 2.625C5.67208 2.62698 4.09942 3.27952 2.93947 4.43947C1.77952 5.59942 1.12698 7.17208 1.125 8.8125C1.125 15.5944 11.0447 21.0131 11.4666 21.2409C11.6305 21.3292 11.8138 21.3754 12 21.3754C12.1862 21.3754 12.3695 21.3292 12.5334 21.2409C12.9553 21.0131 22.875 15.5944 22.875 8.8125C22.873 7.17208 22.2205 5.59942 21.0605 4.43947C19.9006 3.27952 18.3279 2.62698 16.6875 2.625ZM16.1728 15.9713C14.8671 17.0792 13.4714 18.0764 12 18.9525C10.5286 18.0764 9.13287 17.0792 7.82719 15.9713C5.79562 14.2284 3.375 11.5706 3.375 8.8125C3.375 7.76821 3.78984 6.76669 4.52827 6.02827C5.26669 5.28984 6.26821 4.875 7.3125 4.875C8.98125 4.875 10.3781 5.75625 10.9584 7.17562C11.0429 7.38254 11.1871 7.55961 11.3726 7.68425C11.5581 7.80889 11.7765 7.87545 12 7.87545C12.2235 7.87545 12.4419 7.80889 12.6274 7.68425C12.8129 7.55961 12.9571 7.38254 13.0416 7.17562C13.6219 5.75625 15.0188 4.875 16.6875 4.875C17.7318 4.875 18.7333 5.28984 19.4717 6.02827C20.2102 6.76669 20.625 7.76821 20.625 8.8125C20.625 11.5706 18.2044 14.2284 16.1728 15.9713Z"
+              fill="#8285A5"
+            />
+          </svg>
+          <p class="item__footer--title">Избранное</p>
+        </div>
+        <div
+          class="item__footer account__footer"
+          onclick="handlerChangeAccount()"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+          >
+            <path
+              d="M4.271 18.346C4.271 18.346 6.5 15.5 12 15.5C17.5 15.5 19.73 18.346 19.73 18.346M12 2C6.477 2 2 6.477 2 12C2 17.523 6.477 22 12 22C17.523 22 22 17.523 22 12C22 6.477 17.523 2 12 2ZM12 12C12.7956 12 13.5587 11.6839 14.1213 11.1213C14.6839 10.5587 15 9.79565 15 9C15 8.20435 14.6839 7.44129 14.1213 6.87868C13.5587 6.31607 12.7956 6 12 6C11.2043 6 10.4413 6.31607 9.87868 6.87868C9.31607 7.44129 9 8.20435 9 9C9 9.79565 9.31607 10.5587 9.87868 11.1213C10.4413 11.6839 11.2043 12 12 12Z"
+              stroke="#8285A5"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <p class="item__footer--title">Войти</p>
+        </div>
+      </div>
+    </footer>
+    <div class="wrapper__popup">
+      <div class="block__registration">
+        <div class="registration__content">
+          <div class="block__title">
+            <div class="title font600">Вход</div>
+            <div class="btn__close">
+              <img src="./icons/close.svg" alt="" />
+            </div>
+          </div>
+          <div class="blick__input">
+            <h3 class="font400">Вход через E-mail:</h3>
+            <input type="text" placeholder="E-mail" class="font400" />
+            <input type="text" placeholder="Пароль" class="password font400" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
