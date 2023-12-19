@@ -12,10 +12,90 @@ const swiper = new Swiper(".swiper", {
 
 // Блок переключения кнопки с "Войти" в "Личный кабинет" и обратно
 // Условно показал
+const closePass = document.querySelector('.closePass');
 const accauntLogin = document.querySelector(".btn__accaunt");
+const logIn = document.querySelector(".logIn");
+const popup = document.querySelector(".wrapper__popup");
+
+closePass.addEventListener('click', () => {
+  closePass.children[0].src = "./images/openPass.svg"
+  document.querySelector('.pass input').type = 'text'
+})
 
 accauntLogin.addEventListener("click", () => {
-  loginAccount();
+  if (!document.querySelector(".logIn")) {
+    popup.style.display = "block";
+  } else {
+    loginAccount()
+  }
+});
+
+const btnClose = document.querySelector(".btn__close");
+
+btnClose.addEventListener("click", () => {
+  popup.style.display = "none";
+});
+
+const btnForm = document.querySelector(".btnForm > button");
+const form = document.forms.form;
+const reEmail = /^[A-Z0-9._%+-]+@[A-Z0-9-]+.+.[A-Z]{2,4}$/i;
+const rePass = /^[A-Za-z0-9,!,?]{6,}$/;
+
+const isErrorBlock = (text, el) => {
+  const elem = document.querySelector(`.${el} .error`);
+  elem.textContent = text;
+  elem.style.display = "block";
+  btnForm.disabled = true;
+  btnForm.style.opacity = "0.5";
+};
+
+const noErrorBlock = (el) => {
+  el.textContent = "";
+  el.style.display = "none";
+  btnForm.disabled = false;
+  btnForm.style.opacity = "1";
+};
+
+form.elements.email.addEventListener("focus", () => {
+  const el = document.querySelector(".email .error");
+  noErrorBlock(el);
+});
+
+form.elements.pass.addEventListener("focus", () => {
+  const el = document.querySelector(".pass .error");
+  noErrorBlock(el);
+});
+
+btnForm.addEventListener("click", (e) => {
+  e.preventDefault();
+  let count = 0;
+  [].forEach.call(form, (el) => {
+    if (el.name === "email") {
+      if (!el.value.trim()) {
+        isErrorBlock("Пустое поле", el.name);
+        count++;
+      } else if (!reEmail.test(el.value)) {
+        isErrorBlock("Некоректный адрес", el.name);
+        count++;
+      }
+    }
+    if (el.name === "pass") {
+      if (!el.value.trim()) {
+        isErrorBlock("Пустое поле", el.name);
+        count++;
+      } else if (!rePass.test(el.value)) {
+        isErrorBlock(
+          "Нужно не менее шести символов латинского алфавита",
+          el.name
+        );
+        count++;
+      }
+    }
+  });
+  if (count === 0) {
+    loginAccount();
+    popup.style.display = "none";
+  }
 });
 
 const loginAccount = () => {
@@ -136,16 +216,15 @@ const arrList = [
   "Одежда и обувь новогодние",
   "Товары для дома новогодние",
   "Открытки новогодние",
-  "Предыдущие коллекции"
+  "Предыдущие коллекции",
 ];
 
 li.forEach((el) => {
   el.addEventListener("click", (e) => {
-
     const div = document.getElementsByClassName("subdirectory")[0];
 
     if (div.children.length > 0) {
-      Array.from(div.children).forEach(el => el.remove())
+      Array.from(div.children).forEach((el) => el.remove());
     }
 
     const item = e.currentTarget;
@@ -171,8 +250,8 @@ li.forEach((el) => {
         li.prepend(a);
       }
     } else {
-      const p = document.createElement('p')
-      p.textContent = 'Тут скоро будет список'
+      const p = document.createElement("p");
+      p.textContent = "Тут скоро будет список";
       div.append(p);
     }
   });

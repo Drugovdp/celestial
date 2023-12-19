@@ -357,11 +357,28 @@
               <img src="./icons/close.svg" alt="">
             </div>
           </div>
-          <div class="blick__input">
+          <form action="#" method="post" name="form" class="blick__input">
             <h3 class="font400">Вход через E-mail:</h3>
-            <input type="text" placeholder="E-mail" class="font400">
-            <input type="text" placeholder="Пароль" class="password font400">
-          </div>
+            <label for="email" class="email">
+              <input id="email" name="email" type="text" placeholder="E-mail" class="font400">
+              <div class="error"></div>
+            </label>
+            <label for="pass" class="pass">
+              <input id="pass" name="pass" type="password" placeholder="Пароль" class="password font400">
+              <div class="closePass"><img src="./images/closePass.svg" alt=""></div>
+              <div class="openPass"><img src="./images/openPass.svg" alt=""></div>
+              <div class="error"></div>
+            </label>
+            <div class="btnForm">
+              <button class="font600">Войти</button>
+              <a href="#" class="font500">Забыли пароль?</a>
+            </div>
+            <div class="line"></div>
+            <div class="register">
+              <p class="font500">У вас нет аккаунта?</p>
+              <a href="#" class="font500">Зарегистрируйтесь</a>
+            </div>
+          </form>
         </div>
       </div>
     </div>
